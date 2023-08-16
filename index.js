@@ -48,7 +48,7 @@ app.use(router.post('/producto', (req, res)=> {
 const port = 4200;
 /**
     Inicializa el servidor 
-    @param port: Puerto donde esta estara habilidato el servidor
+    @param port: Puerto donde esta estara habilitado el servidor
     @function callback: Función que se ejecuta despues de ejecutar el servidor
 */
 app.listen(port, ()=> {console.log("server");})
