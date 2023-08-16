@@ -32,6 +32,8 @@ Run Producción:
 
 <code>GET, POST, PUT, DELETE /usuario</code> - Petición básica de enrutado
 
-<code>GET /producto</code> - Petición solo GET
+<code>GET /usuario</code> - Petición básica de enrutado
 
 <code>POST /producto</code>- Petición solo POST
+
+<code>GET /producto/otro</code> - Petición solo GET
