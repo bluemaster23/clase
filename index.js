@@ -33,16 +33,23 @@ app.use('/usuario', (req, res)=>{
 
 
 /**
- * Rutas controladas 
+ * Peticiones sin el ROUTER
  */
-app.use( '/producto' ,router.get( '',(req, res)=> {
-    res.status(200).send({success:true })
-}))
-
+app.get('/usuario2', (req, res)=>{
+    res.status(200).send({success:false });
+}) 
+ 
 app.use(router.post('/producto', (req, res)=> {
     const { nombre } = req.body
     console.log(nombre);
-    res.status(200).send({success:true })
+    res.status(200).send({success:true, data : [] , msg : 'postProducto' })
+}))
+
+/**
+ * Route Anidado
+ */
+app.use('/producto/',router.get('/otro', (req, res)=> {
+    res.status(200).send({success:true , data : [] , msg : 'getProducto' })
 }))
 
 const port = 4200;
