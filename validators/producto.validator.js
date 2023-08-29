@@ -12,4 +12,8 @@ export const productoValidator = checkSchema({
         errorMessage: 'Password debe tener minimo 8 caracteres',
       },
     },
+    cantidad: {
+      matches : { options : /\b\d{5}\b/g},
+      errorMessage: 'la cantidad debe ser un múmero'
+    }
 } ,["query"]);
