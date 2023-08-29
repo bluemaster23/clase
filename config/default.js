@@ -3,5 +3,6 @@ dotenv.config();
 export const exports =  {
   port: process.env.PORT || 3000,
   postgress: process.env.DB_URL_PG,
-  secret: process.env.SECRET_KEY
+  secret: process.env.SECRET_KEY,
+  apiEscuela: process.env.API_ESCUELA
 };
