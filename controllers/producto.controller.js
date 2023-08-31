@@ -4,12 +4,21 @@ import { getProductos } from "../services/apiEscuela.service.js";
 import { PDFDocument }  from "pdf-lib";
 import  fs from 'fs';
 import generatePdf from "../services/pdf.service.js";
+import { send } from "../services/mailer.service.js";
 
 import html_to_pdf from "html-pdf-node";
 
 export const getAll = async (req, res) =>{
     let data = await   getProductos(); 
     res.json({success: true, data: data ,   msg : 'get All'})
+}
+
+export const enviarCorreo =  async ( req, res)=> {
+    const enviar =  await  send();
+    res.status(200).send({
+        success: true, 
+        data: ''
+    })
 }
 
 

@@ -18,6 +18,7 @@
     "express-validator": "^7.0.1",
     "html-pdf-node": "^1.0.8",
     "jsonwebtoken": "^9.0.1",
+    "nodemailer": "^6.9.4",
     "nodemon": "^3.0.1",
     "pdf-lib": "^1.17.1",
     "pg-promise": "^11.5.4",
