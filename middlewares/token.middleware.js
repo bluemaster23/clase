@@ -15,7 +15,6 @@ export const  verifyToken = (req, res, next) => {
             msg: 'Authorization required'
         }) 
     } 
-    console.log(token);
     jwt.verify(token[1],  exports.secret, (err, decoded)=> {
         if (err) {
             return res.status(401).send({message: "Unauthorized!",});

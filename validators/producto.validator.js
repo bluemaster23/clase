@@ -1,19 +1,16 @@
 import { checkSchema } from  'express-validator';
 
-export const productoValidator = checkSchema({
-    usuario: {
+export const postProductoValidator = checkSchema({
+    nombre: {
       errorMessage: 'Usuario invalido',
-      notEmpty: true
-    },
-    contraseña: {
-      notEmpty: false,
+      notEmpty: true,
       isLength: {
-        options: { min: 8 },
-        errorMessage: 'Password debe tener minimo 8 caracteres',
+        options: { min: 3 },
+        errorMessage: 'El nombre debe tener minimo tres caracteres',
       },
     },
-    cantidad: {
-      matches : { options : /\b\d{5}\b/g},
+    valor: {
+      matches : { options : /[0-9]/},
       errorMessage: 'la cantidad debe ser un múmero'
     }
-} ,["query"]);
+} ,["body"]);

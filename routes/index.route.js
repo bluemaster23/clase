@@ -6,7 +6,7 @@ const router = Router();
 
 const generalRouters =[
     {path: '/auth' , route : Auth},
-    {path: '/producto' , route : Producto}
+    {path: '/api/producto' , route : Producto}
 
 ];
 
